@@ -2,16 +2,13 @@ package Dijkstra;
 
 import java.util.PriorityQueue;
 
-public abstract class Stap implements Comparable<Stap>{
+public abstract class Stap implements Comparable{
     private String start;
     private String end;
-    private PriorityQueue<Stap> costs;
 
-
-    public Stap(String start, String end, PriorityQueue<Stap> costs) {
+    public Stap(String start, String end) {
         this.start = start;
         this.end = end;
-        this.costs = costs;
     }
 
     public String getStart() {
@@ -22,14 +19,10 @@ public abstract class Stap implements Comparable<Stap>{
         return end;
     }
 
-    public PriorityQueue<Stap> getCosts() {
-        return costs;
-    }
-
     public abstract int getValue();
 
     @Override
-    public int compareTo(Stap stap){
+    public int compareTo(Object o) {
         return 0;
     }
 
@@ -38,7 +31,6 @@ public abstract class Stap implements Comparable<Stap>{
         return "Stap{" +
                 "start='" + start + '\'' +
                 ", end='" + end + '\'' +
-                ", costs=" + costs +
                 '}';
     }
 }

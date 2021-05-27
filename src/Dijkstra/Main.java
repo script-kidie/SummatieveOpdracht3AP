@@ -5,24 +5,34 @@ import java.util.PriorityQueue;
 public class Main {
 
     public static void main(String[] args) {
-        PriorityQueue<Stap> queue1 = new PriorityQueue<Stap>();
-        PriorityQueue<Stap> queue2 = new PriorityQueue<Stap>();
+        PriorityQueue<Stap> s1r1 = new PriorityQueue<>();
+        PriorityQueue<Stap> s2r1 = new PriorityQueue<>();
 
 
-        Vlucht s1v1 = new Vlucht("am","lo",queue1,144);
-        Vlucht s1v2 = new Vlucht("am","lo",queue1,100);
-        Vlucht s2v1= new Vlucht("lo","mo",queue2,166);
-        Vlucht s2v2 = new Vlucht("lo","mo",queue2,122);
+        Vlucht s1v1 = new Vlucht("am","lo", 144);
+        Vlucht s1v2 = new Vlucht("am","lo", 100);
+        Vlucht s2v1= new Vlucht("lo","mo", 166);
+        Vlucht s2v2 = new Vlucht("lo","mo", 122);
 
 
 
-        queue1.add(s1v1);
-        queue1.add(s1v2);
+        s1r1.add(s1v1);
+        s1r1.add(s1v2);
 
-        queue2.add(s2v1);
-        queue2.add(s2v2);
+        s2r1.add(s2v1);
+        s2r1.add(s2v2);
 
-        System.out.println(queue1);
-        System.out.println(queue2);
+        System.out.println(s1r1);
+        System.out.println(s2r1);
+
+        Reis r1 = new Reis(s1r1);
+
+        r1.setCost(0);
+        r1.setCost(r1.compareTo(s1r1) + r1.getCost());
+        System.out.println(r1.getCost());
+        r1.setCost(r1.compareTo(s2r1) + r1.getCost());
+        System.out.println(r1.getCost());
+
+
     }
 }
