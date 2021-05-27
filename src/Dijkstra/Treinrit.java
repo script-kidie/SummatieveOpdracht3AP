@@ -10,12 +10,9 @@ public class Treinrit extends Stap {
         this.time = time;
     }
 
-    public int getTime() {
-        return time;
-    }
     @Override
     public int getValue() {
-        return getTime();
+        return time;
     }
 
     @Override

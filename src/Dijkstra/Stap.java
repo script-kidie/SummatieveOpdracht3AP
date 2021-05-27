@@ -22,10 +22,14 @@ public abstract class Stap implements Comparable<Stap>{
         return end;
     }
 
+    public PriorityQueue<Stap> getCosts() {
+        return costs;
+    }
+
     public abstract int getValue();
 
     @Override
-    public int compareTo(Stap stapCost){
+    public int compareTo(Stap stap){
         return 0;
     }
 

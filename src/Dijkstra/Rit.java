@@ -10,12 +10,9 @@ public class Rit extends Stap{
         this.kilometers = kilometers;
     }
 
-    public int getKilometers() {
-        return kilometers;
-    }
     @Override
     public int getValue() {
-        return getKilometers();
+        return kilometers;
     }
 
     @Override

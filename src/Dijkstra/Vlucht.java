@@ -10,13 +10,9 @@ public class Vlucht extends Stap {
         this.price = price;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
     @Override
     public int getValue() {
-        return getPrice();
+        return price;
     }
 
     @Override
