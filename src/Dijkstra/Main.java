@@ -22,16 +22,11 @@ public class Main {
         s2r1.add(s2v1);
         s2r1.add(s2v2);
 
-        System.out.println(s1r1);
-        System.out.println(s2r1);
-
         Reis r1 = new Reis(s1r1);
 
         r1.setCost(0);
         r1.setCost(r1.compareTo(s1r1) + r1.getCost());
-        System.out.println(r1.getCost());
         r1.setCost(r1.compareTo(s2r1) + r1.getCost());
-        System.out.println(r1.getCost());
 
 
     }

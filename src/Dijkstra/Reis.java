@@ -18,14 +18,11 @@ public class Reis implements Comparable<PriorityQueue<Stap>> {
         this.cost = cost;
     }
 
-
-
     @Override
     public int compareTo(PriorityQueue<Stap> steps){
-        System.out.println(steps);
         Stap current = steps.poll();
         if(current == null){
-            System.out.println("er is geen verbinding tussen "+ current.getStart() +" en "+ current.getEnd());
+            System.out.println("deze reis in niet mogelijk");
             return 21;
         } else {
             for (Stap s : steps) {
@@ -33,8 +30,9 @@ public class Reis implements Comparable<PriorityQueue<Stap>> {
                     current = s;
                 }
             }
-            return current.getValue();
+
         }
+        return current.getValue();
     }
 }
 
