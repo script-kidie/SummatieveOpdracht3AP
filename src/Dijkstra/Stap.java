@@ -1,25 +1,20 @@
 package Dijkstra;
 
 public class Stap {
-    private int kilometers;
-    private int time;
-    private float price;
+    private String start;
+    private String end;
 
-    public Stap(int kilometers, int time, float price) {
-        this.kilometers = kilometers;
-        this.time = time;
-        this.price = price;
+    public Stap(String start, String end) {
+        this.start = start;
+        this.end = end;
     }
 
-    public int getKilometers() {
-        return kilometers;
+    public String getStart() {
+        return start;
     }
 
-    public int getTime() {
-        return time;
-    }
-
-    public float getPrice() {
-        return price;
+    public String getEnd() {
+        return end;
     }
 }
+
