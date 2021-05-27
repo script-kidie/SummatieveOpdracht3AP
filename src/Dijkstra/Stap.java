@@ -1,7 +1,5 @@
 package Dijkstra;
 
-import java.util.PriorityQueue;
-
 public abstract class Stap implements Comparable{
     private String start;
     private String end;
@@ -9,14 +7,6 @@ public abstract class Stap implements Comparable{
     public Stap(String start, String end) {
         this.start = start;
         this.end = end;
-    }
-
-    public String getStart() {
-        return start;
-    }
-
-    public String getEnd() {
-        return end;
     }
 
     public abstract int getValue();

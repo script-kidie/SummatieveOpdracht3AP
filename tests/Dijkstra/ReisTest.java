@@ -4,8 +4,6 @@ import junit.framework.TestCase;
 
 import java.util.PriorityQueue;
 
-import static org.junit.Assert.*;
-
 public class ReisTest extends TestCase {
 
     public void testValidVluchtClass() {
@@ -96,9 +94,6 @@ public class ReisTest extends TestCase {
     public void testEmptyPQ() {
         PriorityQueue<Stap> s1r1 = new PriorityQueue<>();
         PriorityQueue<Stap> s2r1 = new PriorityQueue<>();
-
-        Vlucht s1v1 = new Vlucht("am","lo", 144);
-        Vlucht s1v2 = new Vlucht("am","lo", 100);
 
         Vlucht s2v1= new Vlucht("lo","mo", 166);
         Vlucht s2v2 = new Vlucht("lo","mo", 122);

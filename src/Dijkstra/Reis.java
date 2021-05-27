@@ -4,10 +4,8 @@ import java.util.PriorityQueue;
 
 public class Reis implements Comparable<PriorityQueue<Stap>> {
     private int cost;
-    private PriorityQueue<Stap> steps;
 
     public Reis(PriorityQueue<Stap> steps) {
-        this.steps = steps;
     }
 
     public int getCost() {
