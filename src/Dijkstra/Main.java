@@ -9,10 +9,10 @@ public class Main {
         PriorityQueue<Stap> queue2 = new PriorityQueue<Stap>();
 
 
-        Vlucht s1v1 = new Vlucht("am","lo", 144);
-        Vlucht s1v2 = new Vlucht("am","lo", 100);
-        Vlucht s2v1= new Vlucht("lo","mo", 166);
-        Vlucht s2v2 = new Vlucht("lo","mo", 122);
+        Vlucht s1v1 = new Vlucht("am","lo",queue1,144);
+        Vlucht s1v2 = new Vlucht("am","lo",queue1,100);
+        Vlucht s2v1= new Vlucht("lo","mo",queue2,166);
+        Vlucht s2v2 = new Vlucht("lo","mo",queue2,122);
 
 
 
