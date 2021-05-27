@@ -5,13 +5,11 @@ import java.util.PriorityQueue;
 public abstract class Stap implements Comparable<Stap>{
     private String start;
     private String end;
-    private PriorityQueue<Stap> costs;
 
 
-    public Stap(String start, String end, PriorityQueue<Stap> costs) {
+    public Stap(String start, String end) {
         this.start = start;
         this.end = end;
-        this.costs = costs;
     }
 
     public String getStart() {
@@ -20,10 +18,6 @@ public abstract class Stap implements Comparable<Stap>{
 
     public String getEnd() {
         return end;
-    }
-
-    public PriorityQueue<Stap> getCosts() {
-        return costs;
     }
 
     public abstract int getValue();
@@ -38,7 +32,6 @@ public abstract class Stap implements Comparable<Stap>{
         return "Stap{" +
                 "start='" + start + '\'' +
                 ", end='" + end + '\'' +
-                ", costs=" + costs +
                 '}';
     }
 }
