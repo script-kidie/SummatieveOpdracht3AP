@@ -1,12 +1,13 @@
 package Dijkstra;
 
-import java.util.HashMap;
+import java.util.PriorityQueue;
 
-public class Reis implements Comparable{
+public class Reis implements Comparable<Reis> {
     private int cost;
-    private HashMap<String, Stap> steps;
+    private PriorityQueue<Stap> steps;
 
-    public Reis(HashMap<String, Stap> steps) {
+    public Reis(int cost, PriorityQueue<Stap> steps) {
+        this.cost = cost;
         this.steps = steps;
     }
 
@@ -15,7 +16,8 @@ public class Reis implements Comparable{
     }
 
     @Override
-    public int compareTo(Object cost) {
+    public int compareTo(Reis reisCost) {
         return 0;
     }
 }
+
